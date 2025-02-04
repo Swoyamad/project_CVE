@@ -28,5 +28,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/', [NewsController::class, 'index'])->name('hacker-news.index');
 Route::get('/story/{id}', [NewsController::class, 'show'])->name('hacker-news.show');
 Route::get('/{category?}/{page?}', [NewsController::class, 'index'])->name('hacker-news.index');
+Route::get('/', fn () => Inertia::render('Home'));
+Route::get('/about', fn () => Inertia::render('About'));
+Route::get('/contact', fn () => Inertia::render('Contact'));
 
 require __DIR__.'/auth.php';
