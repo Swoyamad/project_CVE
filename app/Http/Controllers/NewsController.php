@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Cache;
 
 class NewsController extends Controller
 {
-    protected $baseUrl = 'https://hacker-news.firebaseio.com/v0';
+    protected $baseUrl = 'https://hacker-news.firebaseio.com/v0'; //base url here
 
     public function index($category = 'top', $page = 1)
     {
