@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-=======
 <?php
-
 
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -37,7 +35,10 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
+            'flash' => [
+                'success' => Session::get('success'),
+                'error' => Session::get('error'),
+            ],
         ];
     }
 }
->>>>>>> 9ccc339076a1c750f30c0c8eb9632fd56bc4dc9e

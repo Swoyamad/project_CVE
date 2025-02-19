@@ -45,3 +45,17 @@ Route::post('/users/{user}/update-password', [ResetPasswordController::class, 'u
     ->name('users.update-password');
 
 require __DIR__.'/auth.php';
+
+// Dashboard
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::resource('users', UserController::class);
+
+Route::get('/users/{user}/reset-password', [ResetPasswordController::class, 'showResetPassword'])
+    ->name('users.reset-password');
+Route::post('/users/{user}/update-password', [ResetPasswordController::class, 'updatePassword'])
+    ->name('users.update-password');
+
+require __DIR__.'/auth.php';
