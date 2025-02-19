@@ -34,4 +34,8 @@ Route::get('/news', [NewsController::class, 'index'])->name('hacker-news.index')
 Route::get('/story/{id}', [NewsController::class, 'show'])->name('hacker-news.show');
 Route::get('/{category?}/{page?}', [NewsController::class, 'index'])->name('hacker-news.index');
 
+<<<<<<< HEAD
 require __DIR__.'/auth.php';
+=======
+require __DIR__.'/auth.php';
+>>>>>>> a72b609e639c2c91edfabe689eaae99e0406fce6
