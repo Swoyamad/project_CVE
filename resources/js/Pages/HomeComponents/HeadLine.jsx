@@ -6,7 +6,7 @@ export default function HeadLine({ children }) {
             <div className="bg0 flex-wr-sb-c p-rl-20 p-tb-8">
                 {/* Trending Now Section */}
                 <div className="f2-s-1 p-r-30 size-w-0 m-tb-6 flex-wr-s-c">
-                    <span className="text-uppercase cl2 p-r-8">
+                    <span className="text-uppercase cl222 p-r-8 ">
                         Trending Now:
                     </span>
 
