@@ -4,11 +4,11 @@ export default function Header({ children }) {
     return (
         <header>
             {/* Header desktop */}
-            <div className="container-menu-desktop bg10">
+            <div className="container-menu-desktop">
                 {/* Header Mobile */}
-                <div className="wrap-header-mobile bg10">
+                <div className="wrap-header-mobile">
                     {/* Logo mobile */}
-                    <div className="logo-mobile bg10">
+                    <div className="logo-mobile">
                         <a href="/">
                             <img
                                 src="images/icons/logo-01.png"
@@ -16,6 +16,7 @@ export default function Header({ children }) {
                             />
                         </a>
                     </div>
+
                     {/* Button show menu */}
                     <div className="btn-show-menu-mobile hamburger hamburger--squeeze m-r--8">
                         <span className="hamburger-box">
@@ -42,16 +43,15 @@ export default function Header({ children }) {
                 {/* Logo Desktop */}
                 <div className="wrap-logo container">
                     <div className="logo">
-                        {/* <a href="/">
+                        <a href="/">
                             <img src="images/logo.png" alt="Company Logo" />
-                        </a> */}
-                        <h1 style={{ fontSize: '50px', color: 'white' }}>SINGH IT</h1>
+                        </a>
                     </div>
                 </div>
 
                 {/* Navigation */}
                 <div className="wrap-main-nav">
-                    <div className="main-nav bg222">
+                    <div className="main-nav">
                         <nav className="menu-desktop">
                             <a className="logo-stick" href="/">
                                 <img src="images/logo.png" alt="Company Logo" />
