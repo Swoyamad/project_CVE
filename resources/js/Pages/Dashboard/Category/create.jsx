@@ -19,7 +19,7 @@ export default function CreateCategory() {
             <div className="bg-white rounded-lg shadow p-6 ">
                 <div className="bg-gray-100 px-4 py-3 rounded-t-lg border border-gray-100">
                     <h2 className="text-lg font-semibold text-gray-700">
-                        Create Category
+                        Create Category Here
                     </h2>
                 </div>
                 <div className="border border-gray-100 p-4">
@@ -36,7 +36,7 @@ export default function CreateCategory() {
                                 type="submit"
                                 className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition"
                             >
-                                Create Category
+                                Create Category Here
                             </button>
                         </div>
                     </form>
