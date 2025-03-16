@@ -44,7 +44,7 @@ export default function Header({ children }) {
                 <div className="wrap-logo container">
                     <div className="logo">
                         <a href="/">
-                            <img src="images/logo.jpg" alt="Company Logo" />
+                            <img src="images/logo.png" alt="Company Logo" />
                         </a>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ export default function Header({ children }) {
                     <div className="main-nav">
                         <nav className="menu-desktop">
                             <a className="logo-stick" href="/">
-                                <img src="images/logo.jpg" alt="Company Logo" />
+                                <img src="images/logo.png" alt="Company Logo" />
                             </a>
 
                             <ul className="main-menu">
