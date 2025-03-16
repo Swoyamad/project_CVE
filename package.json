@@ -22,7 +22,11 @@
     },
     "dependencies": {
         "react-quill": "^2.0.0",
+<<<<<<< HEAD
         "react-select": "^5.10.1",
         "select": "^1.1.2"
+=======
+        "react-select": "^5.10.1"
+>>>>>>> 4ab9da42f5b7d03b4623c686bd01b83eb74be3e8
     }
 }
