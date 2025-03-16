@@ -15,18 +15,13 @@
         "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^1.0",
         "postcss": "^8.4.31",
-        "react": "^18.3.1",
+        "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tailwindcss": "^3.2.1",
         "vite": "^6.0"
     },
     "dependencies": {
         "react-quill": "^2.0.0",
-<<<<<<< HEAD
-        "react-select": "^5.10.1",
-        "select": "^1.1.2"
-=======
         "react-select": "^5.10.1"
->>>>>>> 4ab9da42f5b7d03b4623c686bd01b83eb74be3e8
     }
 }

@@ -35,6 +35,15 @@ export default function Dashboard({ children }) {
 
                         <li className="mb-2">
                             <Link
+                                href={route("news.index")}
+                                className="block py-2 px-4 rounded hover:bg-gray-700"
+                            >
+                                News
+                            </Link>
+                        </li>
+
+                        <li className="mb-2">
+                            <Link
                                 href={route("profile.edit")}
                                 className="block py-2 px-4 rounded hover:bg-gray-700"
                             >
