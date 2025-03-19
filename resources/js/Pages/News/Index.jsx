@@ -12,7 +12,7 @@ export default function HackerNewsIndex({
             <Head title="HackerNews" />
 
             <div className="flex justify-between items-center mb-6">
-                <h1 className="text-3xl font-bold">SinghIT </h1>
+                <h1 className="text-3xl font-bold">HackerNews </h1>
                 <div>
                     {["top", "best", "new"].map((category) => (
                         <Link
