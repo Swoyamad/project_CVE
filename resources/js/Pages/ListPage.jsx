@@ -88,7 +88,12 @@ export default function CategoryNewsPage() {
                                                 </div>
 
                                                 <p className="f1-s-1 cl6 p-b-24">
-                                                    {item.short_description}
+                                                    <div
+                                                        className="text-gray-600"
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: item.short_description,
+                                                        }}
+                                                    />
                                                 </p>
 
                                                 <a
