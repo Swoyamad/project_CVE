@@ -1,28 +1,23 @@
+import { usePage } from "@inertiajs/react";
 import React from "react";
 
 export default function HeadLine({ children }) {
+    const { trendingNews } = usePage().props;
     return (
         <div className="container">
             <div className="bg0 flex-wr-sb-c p-rl-20 p-tb-8">
                 {/* Trending Now Section */}
                 <div className="f2-s-1 p-r-30 size-w-0 m-tb-6 flex-wr-s-c">
-                    <span className="text-uppercase cl222 p-r-8 ">
+                    <span className="text-uppercase cl2 p-r-8">
                         Trending Now:
                     </span>
 
                     <span className="dis-inline-block cl6 slide100-txt pos-relative size-w-0">
-                        <span className="dis-inline-block slide100-txt-item animated">
-                            Microsoft quisque at ipsum vel orci eleifend
-                            ultrices
-                        </span>
-
-                        <span className="dis-inline-block slide100-txt-item animated">
-                            Apple unveils new iPhone with AI-powered features
-                        </span>
-
-                        <span className="dis-inline-block slide100-txt-item animated">
-                            Tesla's new electric truck hits the market
-                        </span>
+                        {trendingNews.map((news) => (
+                            <span className="dis-inline-block slide100-txt-item animated">
+                                {news.title}
+                            </span>
+                        ))}
                     </span>
                 </div>
 
