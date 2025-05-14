@@ -1,4 +1,4 @@
-import Dashboard from "@/Pages/Dashboard";
+import DashboardLayout from "@/Pages/Dashboard/DashboardLayout";
 import { Link, usePage, router } from "@inertiajs/react";
 import { useState } from "react";
 
@@ -24,7 +24,7 @@ export default function Index({ categories, search }) {
     };
 
     return (
-        <Dashboard>
+        <DashboardLayout>
             <div className="bg-white p-6 rounded-lg shadow-md">
                 <h1 className="text-2xl font-semibold mb-4">Categories</h1>
 
@@ -112,16 +112,15 @@ export default function Index({ categories, search }) {
                         <Link
                             key={link.label}
                             href={link.url}
-                            className={`px-3 py-1 border rounded ${
-                                link.active
+                            className={`px-3 py-1 border rounded ${link.active
                                     ? "bg-blue-500 text-white"
                                     : "bg-gray-200 text-gray-700"
-                            } mx-1`}
+                                } mx-1`}
                             dangerouslySetInnerHTML={{ __html: link.label }}
                         />
                     ))}
                 </div>
             </div>
-        </Dashboard>
+        </DashboardLayout>
     );
 }
