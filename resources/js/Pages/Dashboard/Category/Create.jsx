@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "@inertiajs/react";
-import Dashboard from "@/Pages/Dashboard";
 import FormComponent from "./Components/FormComponent";
+import DashboardLayout from "@/Pages/Dashboard/DashboardLayout";
 
 export default function CreateCategory() {
     const { data, setData, post, errors } = useForm({
@@ -15,11 +15,11 @@ export default function CreateCategory() {
     };
 
     return (
-        <Dashboard>
+        <DashboardLayout>
             <div className="bg-white rounded-lg shadow p-6 ">
                 <div className="bg-gray-100 px-4 py-3 rounded-t-lg border border-gray-100">
                     <h2 className="text-lg font-semibold text-gray-700">
-                        Create Category Here
+                        Create Category
                     </h2>
                 </div>
                 <div className="border border-gray-100 p-4">
@@ -36,12 +36,12 @@ export default function CreateCategory() {
                                 type="submit"
                                 className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition"
                             >
-                                Create Category Here
+                                Create Category
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
-        </Dashboard>
+        </DashboardLayout>
     );
 }
