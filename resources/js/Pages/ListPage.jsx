@@ -5,17 +5,17 @@ import moment from "moment";
 import Sidebar from "@/Layouts/Sidebar";
 import Search from "@/Components/Search";
 
-export default function CategoryNewsPage() {
-    const { news, pagination, category } = usePage().props;
+export default function SearchNewsPage() {
+    const { news, pagination, search } = usePage().props;
 
     // Handle page change
     const handlePageChange = (page) => {
-        router.visit(`/category/${category.slug}?page=${page}`);
+        router.visit(`/search?page=${page}&search=${search}`);
     };
 
     return (
         <Layout>
-            <Head title={category.title} />
+            <Head title={search} />
 
             {/* Breadcrumb  */}
             <div className="container">
@@ -34,7 +34,9 @@ export default function CategoryNewsPage() {
 
             {/* Page heading  */}
             <div className="container p-t-4 p-b-40">
-                <h2 className="f1-l-1 cl2">News List</h2>
+                <h2 className="f1-l-1 cl2">
+                    Search Results for Keyword: {search}
+                </h2>
             </div>
 
             {/* News List */}
@@ -128,9 +130,9 @@ export default function CategoryNewsPage() {
                                             <button
                                                 key={index}
                                                 className={`px-3 py-2 mx-1 border ${pagination.current_page ===
-                                                    index + 1
-                                                    ? "bg-gray-800 text-white"
-                                                    : "bg-white text-gray-800"
+                                                        index + 1
+                                                        ? "bg-gray-800 text-white"
+                                                        : "bg-white text-gray-800"
                                                     } rounded`}
                                                 onClick={() =>
                                                     handlePageChange(index + 1)

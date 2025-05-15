@@ -129,11 +129,12 @@ export default function SearchNewsPage() {
                                         (_, index) => (
                                             <button
                                                 key={index}
-                                                className={`px-3 py-2 mx-1 border ${pagination.current_page ===
-                                                        index + 1
+                                                className={`px-3 py-2 mx-1 border ${
+                                                    pagination.current_page ===
+                                                    index + 1
                                                         ? "bg-gray-800 text-white"
                                                         : "bg-white text-gray-800"
-                                                    } rounded`}
+                                                } rounded`}
                                                 onClick={() =>
                                                     handlePageChange(index + 1)
                                                 }
@@ -146,17 +147,17 @@ export default function SearchNewsPage() {
                                     {/* Render Next Button */}
                                     {pagination.current_page <
                                         pagination.total_pages && (
-                                            <button
-                                                className="px-3 py-2 mx-1 border bg-white text-gray-800 rounded"
-                                                onClick={() =>
-                                                    handlePageChange(
-                                                        pagination.current_page + 1
-                                                    )
-                                                }
-                                            >
-                                                Next
-                                            </button>
-                                        )}
+                                        <button
+                                            className="px-3 py-2 mx-1 border bg-white text-gray-800 rounded"
+                                            onClick={() =>
+                                                handlePageChange(
+                                                    pagination.current_page + 1
+                                                )
+                                            }
+                                        >
+                                            Next
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                         </div>
