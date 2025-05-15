@@ -61,6 +61,7 @@ export default function FormComponent({
                     <p className="text-red-500 text-sm mt-1">{errors.image}</p>
                 )}
             </div>
+            <div></div>
             {/* Categories Multi-Select */}
             <div>
                 <label className="block font-medium">Categories</label>

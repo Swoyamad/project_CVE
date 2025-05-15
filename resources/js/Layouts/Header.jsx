@@ -25,13 +25,19 @@ export default function Header({ children }) {
 
                     {/* Button show menu */}
                     <button
-                        className={`btn-show-menu-mobile hamburger hamburger--squeeze m-r--8 ${isMenuOpen ? "is-active" : ""
+                        className={`btn-show-menu-mobile hamburger ${isMenuOpen ? "is-active" : ""
                             }`}
                         onClick={toggleMenu}
                     >
                         <span className="hamburger-box">
                             <span className="hamburger-inner"></span>
+                            <span className="hamburger-inner"></span>
+                            <span className="hamburger-inner"></span>
                         </span>
+                        {/* "X" icon when menu is open */}
+                        {isMenuOpen && (
+                            <span className="hamburger-close">X</span>
+                        )}
                     </button>
                 </div>
 
@@ -46,7 +52,7 @@ export default function Header({ children }) {
                             </li>
                         ))}
                         <li>
-                            <a href="/news">Hackers News</a>
+                            <a href="/hackers-news">Hackers News</a>
                         </li>
                     </ul>
                 </div>
@@ -80,7 +86,7 @@ export default function Header({ children }) {
                                     </li>
                                 ))}
                                 <li>
-                                    <a href="/news">Hackers News</a>
+                                    <a href="/hackers-news">Hackers News</a>
                                 </li>
                             </ul>
                         </nav>

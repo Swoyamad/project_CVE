@@ -34,7 +34,9 @@ export default function SearchNewsPage() {
 
             {/* Page heading  */}
             <div className="container p-t-4 p-b-40">
-                <h2 className="f1-l-1 cl2">News List</h2>
+                <h2 className="f1-l-1 cl2">
+                    Search Results for Keyword: {search}
+                </h2>
             </div>
 
             {/* News List */}
@@ -128,9 +130,9 @@ export default function SearchNewsPage() {
                                             <button
                                                 key={index}
                                                 className={`px-3 py-2 mx-1 border ${pagination.current_page ===
-                                                    index + 1
-                                                    ? "bg-gray-800 text-white"
-                                                    : "bg-white text-gray-800"
+                                                        index + 1
+                                                        ? "bg-gray-800 text-white"
+                                                        : "bg-white text-gray-800"
                                                     } rounded`}
                                                 onClick={() =>
                                                     handlePageChange(index + 1)
