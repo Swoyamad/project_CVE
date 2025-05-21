@@ -74,11 +74,10 @@ export default function Index({ subscribers, search }) {
                         <Link
                             key={link.label}
                             href={link.url}
-                            className={`px-3 py-1 border rounded ${
-                                link.active
+                            className={`px-3 py-1 border rounded ${link.active
                                     ? "bg-blue-500 text-white"
                                     : "bg-gray-200 text-gray-700"
-                            } mx-1`}
+                                } mx-1`}
                             dangerouslySetInnerHTML={{ __html: link.label }}
                         />
                     ))}
