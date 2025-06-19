@@ -21,21 +21,16 @@ export default function Footer() {
                                     />
                                 </Link>
                             </div>
+                            <br></br>
 
                             <div>
-                                <p className="f1-s-1 cl11 p-b-16">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Curabitur tempor magna eget
-                                    elit efficitur, at accumsan sem placerat.
-                                    Nulla tellus libero, mattis nec molestie at,
-                                    facilisis ut turpis.
-                                </p>
-
-                                <p className="f1-s-1 cl11 p-b-16">
-                                    Any questions? Call us on (+1) 98 511 515 12{" "}
+                                <p className="f1-m-7 cl11 p-b-16">
+                                    Have Suggestions ?{" "}
                                     <br></br>
-                                    <a href="feedback">
-                                        Click here to send feedback
+                                    <br></br>
+
+                                    <a href="feedback" className="f1-s-1 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+                                        Let us know here !
                                     </a>
                                 </p>
 
