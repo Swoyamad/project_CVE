@@ -1,3 +1,144 @@
+
+# CVE Aggregator – Technical Setup Manual
+
+## Project Overview
+
+CVE Aggregator is a Laravel-based web platform that consolidates recent cybersecurity news and vulnerability reports from sources like Hacker News, enabling real-time access to tech alerts, CVE details, and email notifications for subscribed users.
+
+## System Requirements
+
+### Technical Requirements
+| Component             | Recommended Version      |
+|----------------------|--------------------------|
+| PHP                  | 8.1+                     |
+| Laravel Framework    | 10.x                     |
+| Composer             | 2.x                      |
+| Node.js              | 18.x                     |
+| npm                  | 9.x                      |
+| MySQL                | 8.x                      |
+| Git                  | Latest                   |
+| OS                   | Windows, macOS, Linux    |
+| Web Server           | Apache (via XAMPP)       |
+
+### Non-Technical Requirements
+- Internet access for downloading dependencies
+- Basic knowledge of Laravel and databases
+- Familiarity with command line usage
+
+## Tech Stack & Versions
+
+| Technology   | Usage             |
+|--------------|------------------|
+| Laravel 10.x | Backend framework |
+| Inertia.js   | Frontend routing  |
+| Vue.js       | SPA frontend      |
+| Tailwind CSS | Styling           |
+| Vite         | Asset bundler     |
+| MySQL        | Database          |
+| API          | Hacker News API   |
+
+## Software & Applications Used
+
+| Software          | Purpose                               | Version |
+|------------------|----------------------------------------|---------|
+| XAMPP             | Apache & MySQL server environment      | 8.1+    |
+| Visual Studio Code| Code editor                            | Latest  |
+| Git               | Version control                        | Latest  |
+| Composer          | PHP dependency manager                 | 2.x     |
+| Node.js & npm     | JS runtime and package manager         | 18.x / 9.x |
+| Laravel Framework | PHP backend framework                  | 10.x    |
+| Postman (optional)| API testing                            | Latest  |
+
+## XAMPP Installation & Configuration
+
+### Installing XAMPP
+1. Go to: https://www.apachefriends.org/index.html
+2. Download XAMPP for your OS.
+3. Install with default settings.
+4. Launch XAMPP Control Panel.
+
+### Starting Services
+Open XAMPP Control Panel and start:
+- Apache
+- MySQL
+
+### Accessing phpMyAdmin & Creating DB
+1. Visit: http://localhost/phpmyadmin
+2. Click on Databases tab.
+3. Create a new database: `cve_aggregator`
+
+## Project Structure
+
+```
+├── app/               → Laravel logic
+├── resources/         → Frontend Vue/Inertia + CSS
+├── routes/web.php     → Application routes
+├── database/          → Migrations/seeders
+├── public/            → Web root
+├── package.json       → Node modules
+├── composer.json      → PHP modules
+├── .env.example       → Config template
+```
+
+## Installation & Setup Instructions
+
+### Cloning & Installing Dependencies
+```bash
+cd C:/xampp/htdocs/
+git clone https://github.com/your-org/project_CVE-main.git
+cd project_CVE-main
+composer install
+npm install
+```
+
+### Environment Configuration
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Update `.env` file:
+```env
+DB_DATABASE=cve_aggregator
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### Database Setup
+Use phpMyAdmin to create the database `cve_aggregator`.
+
+### Running Migrations & Seeders
+```bash
+php artisan migrate
+php artisan db:seed  # optional
+```
+
+### Running the Application
+```bash
+npm run dev
+php artisan serve
+```
+Visit: http://localhost:8000
+
+## Troubleshooting
+
+| Issue                     | Suggested Fix                                         |
+|--------------------------|--------------------------------------------------|
+| Blank page / 500 error   | Check Apache/MySQL in XAMPP, `.env` configuration |
+| Composer memory error    | Run `COMPOSER_MEMORY_LIMIT=-1 composer install`   |
+| npm errors               | Delete `node_modules` + `package-lock.json`, reinstall |
+| DB not connecting        | Verify `.env` and phpMyAdmin settings             |
+
+## Credits
+
+- Team: Mythical Glory  
+- Client: Singh IT  
+- Lead Developer: Swoyam Adhikari (Backend) Meenakshi CS (Backend) Aashish KC (Frontend) Nitish Sharma (Frontend)
+- Project: CVE Aggregator – API-based Cybersecurity News Platform  
+- GitHub: https://github.com/your-org/project_CVE-main
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
