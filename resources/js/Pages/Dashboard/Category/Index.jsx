@@ -58,6 +58,8 @@ export default function Index({ categories, search }) {
                             <th className="p-3">Title</th>
                             <th className="p-3">Slug</th>
                             <th className="p-3">Is Active</th>
+                            <th className="p-3">Visitor Count</th>
+                            <th className="p-3">Unique Visitor Count</th>
                             <th className="p-3">Actions</th>
                         </tr>
                     </thead>
@@ -72,6 +74,12 @@ export default function Index({ categories, search }) {
                                     <td className="p-3">{category.slug}</td>
                                     <td className="p-3">
                                         {category.is_active ? "Yes" : "No"}
+                                    </td>
+                                    <td className="p-3">
+                                        {category.views_count}
+                                    </td>
+                                    <td className="p-3">
+                                        {category.unique_views_count}
                                     </td>
                                     <td className="p-3 flex space-x-2">
                                         <Link
@@ -112,10 +120,11 @@ export default function Index({ categories, search }) {
                         <Link
                             key={link.label}
                             href={link.url}
-                            className={`px-3 py-1 border rounded ${link.active
+                            className={`px-3 py-1 border rounded ${
+                                link.active
                                     ? "bg-blue-500 text-white"
                                     : "bg-gray-200 text-gray-700"
-                                } mx-1`}
+                            } mx-1`}
                             dangerouslySetInnerHTML={{ __html: link.label }}
                         />
                     ))}
