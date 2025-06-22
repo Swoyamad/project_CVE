@@ -10,9 +10,9 @@ CVE Aggregator is a Laravel-based web platform that consolidates recent cybersec
 ### Technical Requirements
 | Component             | Recommended Version      |
 |----------------------|--------------------------|
-| PHP                  | 8.1+                     |
-| Laravel Framework    | 10.x                     |
-| Composer             | 2.x                      |
+| PHP                  | 8.2.12                   |
+| Laravel Framework    | 11                   |
+| Composer             | 2.8.5                     |
 | Node.js              | 18.x                     |
 | npm                  | 9.x                      |
 | MySQL                | 8.x                      |
@@ -29,7 +29,7 @@ CVE Aggregator is a Laravel-based web platform that consolidates recent cybersec
 
 | Technology   | Usage             |
 |--------------|------------------|
-| Laravel 10.x | Backend framework |
+| Laravel 11 | Backend framework |
 | Inertia.js   | Frontend routing  |
 | Vue.js       | SPA frontend      |
 | Tailwind CSS | Styling           |
@@ -85,7 +85,7 @@ Open XAMPP Control Panel and start:
 ### Cloning & Installing Dependencies
 ```bash
 cd C:/xampp/htdocs/
-git clone https://github.com/your-org/project_CVE-main.git
+git clone https://github.com/Swoyamad/project_CVE.git
 cd project_CVE-main
 composer install
 npm install
@@ -135,7 +135,7 @@ Visit: http://localhost:8000
 - Client: Singh IT  
 - Lead Developer: Swoyam Adhikari (Backend) Meenakshi CS (Backend) Aashish KC (Frontend) Nitish Sharma (Frontend)
 - Project: CVE Aggregator – API-based Cybersecurity News Platform  
-- GitHub: https://github.com/your-org/project_CVE-main
+- GitHub: https://github.com/Swoyamad/project_CVE.git
 
 
 
